@@ -1,0 +1,156 @@
+@import 'variables.less';
+@import 'mixins.less';
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px; 
+}
+html, body {
+    overflow-x:hidden;
+}
+body {
+   
+    max-width:1920px;
+    margin:0 auto;
+}
+.row {
+    margin-left:0;
+    margin-right:0;
+}
+
+.secondary-button {
+    
+    .wp-block-button__link{
+        width: 207px;
+        font-size:21px;
+    }
+    
+}
+.trietrary-button{
+    
+}
+h1,h2,h3,h4{
+    font-family: 'Arquitecta', sans-serif;
+    font-weight:900;
+}
+p{
+    font-size:16px;
+    font-family:'Corporative Cnd', sans-serif;
+    @media @medium{
+        font-size:18px;
+    }
+}
+.gallery-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    .single-gallery-cnt{
+        flex-basis:100%;
+        margin-bottom:10px;
+        height:350px;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        background-size:100% 100%; background-repeat:no-repeat;
+        @media @large{
+            flex-basis:33%;
+            background-size:100% auto; background-repeat:no-repeat;
+        }
+       
+
+    }
+}
+
+.gallery-subject, .gallery-title, .gallery-subtitle, .gallery-button{
+    .upper;
+    font-weight:bold;
+}
+.gallery-button{
+    background-color:#F24405;
+    color:#fff;
+    font-size:15px;
+    padding:10px 34px;
+    border-radius:50px;
+    margin-top:10px;
+    :hover{
+        text-decoration: none!important;
+        color:white!important;
+    }
+    @media @x-large{
+        font-size:17px;
+        padding:19px 54px;
+    }
+}
+.gallery-title{
+    font-size:18px;
+}
+.gallery-subject{
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size:25px;
+}
+.gallery-subtitle-cnt{
+    margin: 10px auto 54px auto;
+    @media @x-large{
+        margin:40px auto 20px auto;  
+    }
+}
+.gallery-subtitle{
+    font-size:20px;
+
+}
+.h-track{
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size:35px;
+    font-weight:bold;
+    @media @medium{
+        font-size:40px;
+    }
+    @media @x-large{
+font-size:60px;
+    }
+}
+a{
+    text-decoration: none!important;
+}
+.wp-block-buttons{
+    text-align:center!important;
+}
+.wp-block-cover__background, .wp-block-cover__inner-container{
+    z-index:0!important;
+}
+
+.ays-quiz-user-results-container{
+    background-color:#fff;
+    overflow-x: hidden;
+    width: 100%;
+}
+table#ays-quiz-user-score-page th{
+    background-color:#13c4c4;
+}
+.yellow-section{
+    p{
+        line-height:2em;
+    }
+}
+.yellow-overlay .wp-block-cover__inner-container{
+    
+    @media @x-large{
+        width:70%!important;
+    }
+}
+.um-account, .container-fluid .um{
+    width:100%;
+    @media (min-width:1200px){
+        width:1000px;
+    }
+    @media (min-width:1400px){
+        width:1200px;
+    }
+    @media (min-width:1600px){
+        width:1560px;
+    }
+}
+
+
+

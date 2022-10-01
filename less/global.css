@@ -1,0 +1,206 @@
+.center-text {
+  text-align: center;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.absolute-0000 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.v-align-transform {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width:599px) {
+  .v-align-transform {
+    top: 50%;
+    left: 50%;
+  }
+}
+.upper {
+  text-transform: uppercase;
+}
+.transition {
+  transition: 0.2s ease-in-out;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.block {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.secondary-button .wp-block-button__link {
+  width: 207px;
+  font-size: 21px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Arquitecta', sans-serif;
+  font-weight: 900;
+}
+p {
+  font-size: 16px;
+  font-family: 'Corporative Cnd', sans-serif;
+}
+@media only screen and (min-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}
+.gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery-section .single-gallery-cnt {
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1200px) {
+  .gallery-section .single-gallery-cnt {
+    flex-basis: 33%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+}
+.gallery-subject,
+.gallery-title,
+.gallery-subtitle,
+.gallery-button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.gallery-button {
+  background-color: #F24405;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 34px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+.gallery-button :hover {
+  text-decoration: none!important;
+  color: white!important;
+}
+@media only screen and (min-width: 1500px) {
+  .gallery-button {
+    font-size: 17px;
+    padding: 19px 54px;
+  }
+}
+.gallery-title {
+  font-size: 18px;
+}
+.gallery-subject {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 25px;
+}
+.gallery-subtitle-cnt {
+  margin: 10px auto 54px auto;
+}
+@media only screen and (min-width: 1500px) {
+  .gallery-subtitle-cnt {
+    margin: 40px auto 20px auto;
+  }
+}
+.gallery-subtitle {
+  font-size: 20px;
+}
+.h-track {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+@media only screen and (min-width: 992px) {
+  .h-track {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .h-track {
+    font-size: 60px;
+  }
+}
+a {
+  text-decoration: none!important;
+}
+.wp-block-buttons {
+  text-align: center!important;
+}
+.wp-block-cover__background,
+.wp-block-cover__inner-container {
+  z-index: 0!important;
+}
+.ays-quiz-user-results-container {
+  background-color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+table#ays-quiz-user-score-page th {
+  background-color: #13c4c4;
+}
+.yellow-section p {
+  line-height: 2em;
+}
+@media only screen and (min-width: 1500px) {
+  .yellow-overlay .wp-block-cover__inner-container {
+    width: 70%!important;
+  }
+}
+.um-account,
+.container-fluid .um {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .um-account,
+  .container-fluid .um {
+    width: 1000px;
+  }
+}
+@media (min-width: 1400px) {
+  .um-account,
+  .container-fluid .um {
+    width: 1200px;
+  }
+}
+@media (min-width: 1600px) {
+  .um-account,
+  .container-fluid .um {
+    width: 1560px;
+  }
+}

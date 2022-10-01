@@ -1,0 +1,180 @@
+@import 'variables.less';
+@import 'mixins.less';
+.navbar {
+    position:relative;
+    display:flex;
+    width:100%;
+    height:90px;
+    z-index:1;
+    background-color:@accent-color;
+    .navbar-collapse {
+        justify-content: flex-end;
+        position: absolute;
+        z-index: 999;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 50vh;
+        background-color: @accent-color;
+       
+      
+        @media @medium{
+            width: auto;
+            height: auto;
+            position: relative;
+
+        }
+    }
+    .navbar-nav {
+        display:flex;   
+        width:100%;
+        justify-content:flex-end;
+    }
+}
+.menu-list-container-main{
+   
+    border-top: 2px solid #fff;
+  @media @medium{
+    border-top: 0px solid #fff;
+  }
+    li{
+        .dropdown-menu{
+            z-index:9;
+            top:50px;
+        }
+    }
+}
+.menu-list-container-main, .menu-list-container-secondary {
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+   position:relative;
+    margin-bottom:0px;
+    top:70px;
+    left:0;
+    @media @medium {
+      flex-direction: row; 
+      align-items:center;
+      top:auto;
+      left:auto;
+    }
+    li {
+        display:flex;
+        height:100%;
+        margin:20px 20px 0px 0px;
+        @media @medium{
+            align-items:center;
+            margin:0px 20px 0px 0px;
+        }
+        .dropdown-menu{
+            z-index:9;
+            top:50px;
+        }
+        a {
+            color:white;
+            font-size:18px;
+            .upper;
+            font-weight:bold;
+            text-decoration: none;
+            &:active, &:hover {
+                text-decoration: none;
+            }
+        } 
+    }
+   
+}
+.navbar-brand {
+    background-color:white;
+    z-index:2;
+    img {  
+        width:150px;
+        display:block;
+        margin:0 auto;
+    }
+}
+.menu-list-container-secondary {
+    li {
+        border:2px solid #fff;
+        padding:12px 42px;
+        border-radius:50px;
+        background-color:transparent;
+        .transition;
+        &:hover {
+            background-color:#F2E905;
+            a{
+                color:#FC6161;
+            }
+        }
+        &:first-child{
+            background-color:#F2E905;
+            a {
+                color:#FC6161;
+            }
+            &:hover {
+                background-color:transparent;
+                a{
+                    color:#fff;
+                }
+            }
+        }
+       
+    }
+    
+    li.active {
+        background-color:#F2E905;
+        a {
+            color:#FC6161;
+        }
+        &:hover {
+            background-color:transparent;
+            a{
+                color:#fff;
+            }
+        }
+
+    }
+}
+.dropdown-menu{
+    border:2px solid @accent-color;
+    li{
+        margin-right:0px;
+        padding:10px;
+        a{
+            color:#000;
+            white-space:nowrap;
+            font-weight:500;
+        
+        }
+    }
+}
+.collapse{
+    transform:translateX(0);
+    transition:.5s ease-in-out;
+    
+}
+.collapse:not(.show){
+    transform:translateX(60vh);
+    @media @medium{
+        transform:translateX(0);
+    }
+}
+.close-button{
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.649' height='29.663' viewBox='0 0 29.649 29.663'%3E%3Cpath id='close-icon' d='M41.135 36.961l-9.751-9.751 9.751-9.751a2.957 2.957 0 0 0-4.182-4.182L27.2 23.029l-9.751-9.751a2.829 2.829 0 0 0-4.182 0 2.857 2.857 0 0 0 0 4.182l9.751 9.751L13.27 36.961a2.859 2.859 0 0 0 0 4.182 2.937 2.937 0 0 0 4.182 0L27.2 31.392l9.751 9.751a2.971 2.971 0 0 0 4.182 0A2.937 2.937 0 0 0 41.135 36.961Z' transform='translate(-12.359 -12.354)' fill='%23fff'/%3E%3C/svg%3E");
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 15px;
+    border: 3px solid #fff;
+    padding: 20px;
+    border-radius: 100%;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    @media @medium{
+        display:none;
+    }
+}

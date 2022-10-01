@@ -1,0 +1,72 @@
+function shortcode_panel(){
+
+	$result = '<section class="section-panel">';
+
+
+	$category = get_the_category();
+	$firstCategory = $category[0]->cat_name;
+	$result .= '<ul class="panel-list">';
+
+
+
+  $args = array(
+				  'post_type'      => 'tablice',
+				  'posts_per_page' => -1,
+				  'orderby' => 'date',
+      			'order' => 'ASC',
+				  'publish_status' => 'published',
+				  'category_name' => $firstCategory
+			   );
+  $loop = new WP_Query($args);
+  $result .= '<li class="button-panel dropdown">'; 
+  $result .= '<a class="array-permalink" id="dropdown-toggle-array" href="#" >Tablice <span class="caret"></span></a>';  
+  $result .= '<ul class="dropdown-array">';   
+  $x = 0;
+  $y = 0;
+  if($loop->have_posts()) :
+	  while($loop->have_posts()) : $loop->the_post() ;
+	 
+	 
+	  $x++;
+	  if ($x <= $loop->post_count) {
+		  $result .= '<li class="array-item">';
+		$result .= '<a class="" data-bs-toggle="collapse" href="#collapseContent'.$x.'" role="button" aria-expanded="false" aria-controls="collapseContent'.$x.'"><span>'. get_the_title() .'</span></a>';
+          $result .=  '</li>';
+	  }
+	  endwhile;
+  endif;   
+  $result .= '</ul>'; 
+  $result .= '</li>'; 	
+		$result .= '<li class="button-panel">';    
+		$result .= '<a class="array-permalink" href="'.get_post_permalink().'"><span>Obiekty</span></a>'; 
+ 		$result .= '</li>';
+		$result .= '<li class="button-panel">';    
+		$result .= '<a class="array-permalink" href="'.get_post_permalink().'"><span>Test</span></a>'; 
+ 		$result .= '</li>';
+  	$result .= '</ul>'; 
+	
+	  $result .= '<div class="container mx-auto">';
+	if($loop->have_posts()) :
+		while($loop->have_posts()) : $loop->the_post() ;
+		
+		$y++;
+		if ($y <= $loop->post_count) {
+		$result .= '<div class="collapse" id="collapseContent'.$y.'">';
+		$result .= '<div class="">';
+			$current_id = get_the_ID(); 
+			$curren_post_id = get_post($current_id); 
+			$post_content = $curren_post_id ->post_content;
+		$result .= $post_content;
+
+		$result .= '</div>';
+		$result .= '</div>';
+		}
+endwhile;
+endif;   
+	wp_reset_postdata();
+	$result .= '</div>';
+	$result .= '</section>';
+  return  $result;            
+}
+
+add_shortcode( 'panel', 'shortcode_panel' ); 
